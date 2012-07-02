@@ -13,6 +13,16 @@ elseif exists("b:current_syntax")
   finish
 endif
 
+
+" Read the C syntax to start with
+if version < 600
+  so <sfile>:p:h/c.vim
+else
+  runtime! syntax/c.vim
+  unlet b:current_syntax
+endif
+
+
 syn case ignore
 syn match asmLabel            "[a-z_][a-z0-9_]*:"he=e-1
 syn match asmIdentifier               "[a-z_][a-z0-9_]*"
