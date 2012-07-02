@@ -84,7 +84,7 @@ if version >= 508 || !exists("did_asm_syntax_inits")
 
   HiLink jumps		Comment
   HiLink calls		PreProc
-  HiLink addressNum	WarningMsg
+  HiLink addressNum	Special
   HiLink alerts		VisualNOS
   "hi addressNum	ctermfg=brown	
 
